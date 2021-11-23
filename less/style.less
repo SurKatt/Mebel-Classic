@@ -1,0 +1,665 @@
+// ===== Подключаю шрифты Fonts =====
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(../fonts/Nunito-ExtraBold.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+// ===== Variables =====
+@body_bg: #F9F1E7;
+@light: #F9F1E7;
+@black: #000000;
+@white: #ffffff;
+@dark: #333333;
+@yellow: #FAE264;
+@yellow_dark: #d1c068;
+@orange: orangered;
+
+// ===== Mixins =====
+
+.text(@family, @size, @weight, @color) {
+    font-family: @family, Arial, Helvetica, sans-serif;    
+    font-size: @size;
+    font-weight: @weight;
+    font-style: normal;    
+    color: @color;
+}
+
+// ===== Common Styles =====
+
+*, 
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+html{     
+    font-size: 10px;        
+}
+
+body{        
+    // width: 100%;
+    
+    .text(Montserrat, 10px, 400, @dark); 
+    background: @body_bg;
+}
+
+.container{
+    padding: 0 120px;
+}
+.wrapper{
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 1440px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.title{
+    .text(Nunito, 5.5rem, 800, @dark);
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 30px;
+}
+.content-text{
+    .text(Montserrat, 1.6rem, 400, @dark);
+    text-align: justify;
+    line-height: 1.5;
+}
+.dark{
+    color: @dark;
+}
+.light{
+    color: @light;
+}
+
+// ===== Header =====
+.header{
+    max-width: 1440px;
+    width: 100%;
+    height: 1000px;
+    padding-top: 1px ;
+    box-sizing: border-box;
+    background-image: url(../img/header_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;    
+    &__inner{
+        margin: 25px 35px 0 35px;
+        padding: 7px 65px;
+        box-sizing: border-box;
+        background: rgba(196, 196, 196, 0.3);
+        border-radius: 10px 10px 0px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        &__logo{
+            width: 70px;
+            height: 60px;
+            background-image: url(../img/logo.svg);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: contain; 
+        }
+        &__nav{
+            display: flex;
+            flex-wrap: wrap;
+            &__link{
+                margin: 0 10px;
+                padding: 0 10px; 
+                position: relative;
+                text-decoration: none;
+                .text(Montserrat, 1.6rem, 400, @white); 
+                transition: all ease 0.1s;  
+                &:hover{
+                    color: @yellow;                    
+                    &::before{
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        position: absolute;
+                        top: 100%;
+                        left: 0%;
+                        background-color: @yellow;
+                    }
+                    &::after{
+                        content: "";
+                        width: 110%;
+                        height: 1px;
+                        position: absolute;
+                        top: 125%;
+                        left: -5%;
+                        background-color: @yellow;
+                    }                             
+                }
+                &:active{
+                    color: @orange;
+                    &::before, &::after{
+                        background-color: @orange;
+                    }
+                } 
+            }            
+        }
+        &__contact{
+            display: flex;
+            flex-direction: column;
+            &__phone, &__email{
+                .text(Montserrat, 1.6rem, 400, @white); 
+                text-decoration: none;
+                &:hover{
+                    color:@yellow;
+                }
+                    &::before{
+                        content: "";  
+                        width: 20px;
+                        height: 20px; 
+                        position: absolute;
+                        top: 0%;
+                        left: -15%;
+                        background-image: url(../img/phone-call-header.svg);   
+                        background-repeat: no-repeat;   
+                        background-size: contain;
+                        background-position: center;    
+                    }
+            }
+            &__phone{
+                display: block;                
+                position: relative;
+                &::before{
+                    background-image: url(../img/phone-call-header.svg);  
+                }
+            }
+            &__schedule{
+                .text(Montserrat, 1rem, 400, @white); 
+                padding-bottom: 7px;
+            }
+            &__email{
+                position: relative;
+                &::before{
+                    background-image: url(../img/email-header.svg);  
+                }
+            }
+        }
+    }
+    &__nav{
+        margin: 0px 35px;
+        padding: 10px 65px;
+        border-top: 1px solid @white;
+        box-sizing: border-box;
+        background: rgba(196, 196, 196, 0.3);
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        &__link{
+            width: calc(100%/4);
+            padding: 3px 0;
+            border: transparent solid 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text(Montserrat, 2.5rem, 400, @white); 
+            text-decoration: none;
+            transition: all ease 0.3s;
+            &:hover{
+                border: @yellow solid 1px;
+                border-radius: 10px;
+            }
+            &:active{
+                background-color:rgba(179, 223, 22, 0.3)
+            }
+            &::before{
+                content: '';
+                display: block ;
+                margin-right: 10px;
+                box-sizing: border-box;
+                width: 30px;
+                height: 30px;
+                background-repeat: no-repeat;   
+                background-size: contain;
+                background-position: center; 
+            }
+            &--kitchen{
+                &::before{                   
+                    background-image: url(../img/kitchen-nav.svg); 
+                }
+            }
+            &--wardrobe{
+                &::before{                   
+                    background-image: url(../img/closet-nav.svg); 
+                }
+            }
+            &--commode{
+                &::before{                  
+                    background-image: url(../img/commode-nav.svg); 
+                }
+            }
+            &--wardrobe-coupe{
+                &::before{                  
+                    background-image: url(../img/ward-coupe-nav.svg); 
+                }
+            }
+        }
+    }
+    &__title{
+        width: 50%;
+        height: calc(100vh-140px);
+        margin-left: auto;
+        margin-top: 13%;
+        &__text{
+            padding: 0 35px 0 0;
+            .text(Nunito, 6rem, 800, @white); 
+        }
+        &__btn{
+            margin-top: 30px;
+        }
+    }
+}
+
+.btn{
+    cursor: pointer;
+    padding: 15px 35px;
+    border:@yellow;
+    box-sizing: border-box;
+    background: @yellow;
+    border-radius: 15px;
+    .text(Roboto, 3.5rem, 400, @dark); 
+    &:hover{
+        box-shadow: 0px 4px 20px 4px rgba(250, 226, 100, 0.5);
+    }
+    &:active{
+        box-shadow: 0px 4px 20px 4px rgba(250, 226, 100, 0.7);
+    }
+}
+
+// ===== Section ABOUT (О нас) =====
+
+.about{
+    max-width: 1200px;
+    width: 100%; 
+    margin: -150px auto 0;
+    padding-bottom: 100px;
+    background-color: @white;
+    border-radius: 15px;
+    background-image: url(../img/about_bgi.svg), url(../img/about_bgi_rotate.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, -9% -27%;
+    &__text{        
+        text-indent: 3rem;
+        padding-bottom: 20px;
+    }
+    &__img{
+        margin: -100px auto 75px;
+        width: 811px;
+        height: 541px;
+        background-color: @yellow;
+        background-image: url(../img/about__img.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+// ===== Section ADVANTAGE (достоинства) =====
+
+.advantage{
+    width: 100%; 
+    padding-bottom: 30px;
+    background-color: @dark;
+    background-image: url(../img/square_bg.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: auto;
+    &__inner{
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__item{
+        width: 20%;
+        padding: 20px;
+        border: 2px solid @light;
+        border-radius: 10px;
+        transition: all ease 0.3s;
+        &__text{ 
+            margin-top: 20px;            
+            text-align: center;       
+        }
+        &__img{
+            display: block;
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            fill: @light;
+        }
+        &:hover{
+            transform: scale(1.3);
+            background-color: #96928d5d;
+            & .advantage__item__text{
+                color: @yellow;
+            }
+            & .advantage__item__img{
+                fill: @yellow;
+            }
+        }
+        
+    }
+}
+
+// ===== Footer =====
+.footer{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    &::before{
+        content: "";
+        width: 80%;
+        height: 1px;
+        background: @dark;
+        position: absolute;
+        top: 0rem;
+        left: 110px;        
+    }
+    &__info{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;        
+    }    
+    &__nav{  
+        width: 40%;    
+        &__title{
+            .text(Montserrat, 2rem, 700, @dark); 
+            margin: 3rem 0 2rem 0;
+        }
+        &__link{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;            
+            &__item{
+                text-decoration: none;
+                .text(Montserrat, 1.6rem, 400, @dark); 
+                padding: 0.5rem 2rem 0.5rem 0;
+                position: relative;               
+                &:hover{
+                    color: @black;
+                    text-decoration: underline;
+                }
+                &:active{
+                    color: orangered;
+                }
+            } 
+        }      
+    }
+    &__social{
+        width: 30%;
+        
+    }
+    &__about{
+        width: 30%;
+        
+    }
+    &__copyright{
+        margin-top: 7rem;
+        .text(Montserrat, 1rem, 400, @dark); 
+        box-sizing:border-box;
+    }
+}
+
+// ===== Modal Window =====
+body.lock{
+    overflow: hidden;
+} 
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+    &.open{
+        opacity: 1;
+        visibility: visible;
+    }
+    &.open .modal__content{
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    &__body{
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+    &__content{
+        max-width: 550px;
+        margin: 0 auto;
+        background-color: #fff;
+        color: @dark;        
+        padding: 30px;
+        position: relative;
+        transition: all 0.8s ease 0s;
+        opacity: 0;
+        transform: translate(0px, -100%);
+    }
+    &__close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: @dark;
+        padding: 2px 6px;
+        transition: all 0,5s ease 0s;
+        &:hover{
+            background-color: @yellow;
+            border-radius: 4px;
+        }
+        &:active{
+            background-color: @orange;
+            border-radius: 4px;
+        }
+    }
+}
+
+// ===== Стилизация формы =====
+
+.form{
+    & *{
+        outline: none;
+    }
+    &__body{
+        position:relative;
+        &::after{
+            
+        }
+    }
+    &__title{
+        .text(Montserrat, 3rem, 700, @dark);
+        margin-bottom: 30px;
+    }
+    &__item{
+        margin-bottom: 20px;
+    }
+    &__label{
+        .text(Montserrat, 1.6rem, 400, @dark);
+        display: block;
+        margin-bottom: 5px;
+    }
+    &__input{
+        height: 35px;
+        padding: 0 20px;
+        border-radius: 5px;
+        width: 100%;
+        border: 1px solid @dark;
+        .text(Montserrat, 1.6rem, 400, @dark);
+        &:focus{
+            box-shadow: 0px 1px 10px 3px rgba(245, 201, 144, 0.3);
+        }
+        &._error{
+            box-shadow: 0px 1px 10px red;
+        }
+
+    }
+    &__button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50px;
+        background-color: @yellow;
+        .text(Montserrat, 1.8rem, 700, @dark);
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.5s ease 0s;
+        position: relative;
+        top: 0;
+        box-shadow: 10px 10px 6px -6px rgba(209, 192, 104, 0.6);
+        &:hover{
+            background-color: @yellow_dark;
+        }
+        &:active{
+            top: 3px;
+            box-shadow: 10px 10px 6px -6px rgba(209, 192, 104, 0);
+        }
+    }
+}
+textarea.form__input{
+    min-height: 120px;
+    resize: vertical;
+    padding: 10px;
+}
+.file{
+    &__item{
+        position: relative;        
+    }
+    &__input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        font-size: 0;
+        cursor: pointer;
+    }
+    &__button{
+        display: inline-flex;
+        min-height: 40px;
+        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+        background-color: @yellow;
+        padding: 0 20px;
+        .text(Montserrat, 1.2rem, 400, @dark);
+    }
+    &__preview{
+        display: inline-block;
+        max-width: 100px;
+        padding: 10px 0 0 0;
+        & img{
+            max-width: 100%;
+        }
+    }
+}
+.checkbox{
+    &._error .checkbox__label::before{
+        box-shadow: 0px 1px 10px red;
+    }
+    &__input{
+        display: none;
+        &:checked + .checkbox__label::after{
+            transform: scale(1);
+        }
+    }
+    &__label{
+        .text(Montserrat, 1.6rem, 400, @dark);
+        line-height: 140%;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;        
+        & a{
+            color: @orange;
+        }
+        &::before{
+            content: "";
+            flex: 0 0 24px;
+            height: 24px;
+            align-self: flex-start;
+            background-color: #fff;
+            border-radius: 4px;
+            border: 1px solid @dark;
+            margin-right: 10px;
+        }
+        &::after{
+            transition: all 0.5s ease 0s;
+            content: "";
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 4px;
+            left: 4.3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: @orange;
+            border-radius: 4px;
+            transform: scale(0);
+        }
+    }
+}
