@@ -26,14 +26,31 @@
     
 </head>
 <body>
-
-        <header class="header">
-        </header>
-        <main class="main">                          
-        </main>
-        <footer class="footer">            
-        </footer>
-    </div>
+    <header class="header">           
+        <nav class="header__nav nav">
+            <a href="/#" class="nav__link">Главная</a>
+            <a href="/about" class="nav__link">О нас</a>
+            <div class="dropdown">
+                <a href="/catalog" class="nav__link">Каталог мебели</a>
+                <div class="dropdown__content">
+                    <a href="/kitchen" class="">Кухни</a>
+                    <a href="/wardrobe" class="">Шкафы</a>
+                    <a href="/commode" class="">Комоды</a>
+                    <a href="/wardrobe-coupe" class="">Шкафы-купе</a>
+                </div>
+            </div>
+            
+                
+            <a href="/order" class="nav__link">Порядок работы</a>
+            <a href="/news" class="nav__link">Новости</a>
+            <a href="/feedback" class="nav__link">Отзывы</a>
+            <a href="/contact" class="nav__link">Контакты</a>
+        </nav>       
+    </header>
+    <main class="main">                          
+    </main>
+    <footer class="footer">            
+       
 
     <!-- Modal Window -->
         <div id="modal-header" class="modal">

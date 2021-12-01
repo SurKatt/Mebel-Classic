@@ -100,6 +100,121 @@ body {
 .light {
   color: #f9f1e7;
 }
+.header {
+  height: 94vh;
+  width: 100vw;
+  background-image: url(../img/header_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__nav {
+  height: 6vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav {
+  background-color: #fae264;
+}
+.nav__link {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+  text-decoration: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 10px;
+  position: relative;
+}
+.nav__link[href="/catalog"] {
+  position: relative;
+}
+.nav__link[href="/catalog"]::after {
+  content: "\25BC";
+  padding-left: 10px;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+}
+.nav__link:hover {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+.nav__link:active {
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown__content {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown__content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 32px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  background-color: #fae264;
+  border-radius: 0 0 10px 10px;
+  -webkit-transition: opacity 0.3s,  linear 0.3s;
+  transition: opacity 0.3s,  linear 0.3s;
+}
+.dropdown__content a {
+  display: block;
+  text-decoration: none;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.dropdown__content a:hover {
+  color: #000000;
+}
+.dropdown__content a:after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: #333333;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.dropdown__content a:hover:after {
+  width: 65%;
+}
 body.lock {
   overflow: hidden;
 }
