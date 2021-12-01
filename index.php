@@ -38,17 +38,17 @@
                     <a href="/commode" class="">Комоды</a>
                     <a href="/wardrobe-coupe" class="">Шкафы-купе</a>
                 </div>
-            </div>
-            
-                
+            </div>               
             <a href="/order" class="nav__link">Порядок работы</a>
             <a href="/news" class="nav__link">Новости</a>
             <a href="/feedback" class="nav__link">Отзывы</a>
             <a href="/contact" class="nav__link">Контакты</a>
         </nav>       
     </header>
+
     <main class="main">                          
     </main>
+    
     <footer class="footer">            
        
 
