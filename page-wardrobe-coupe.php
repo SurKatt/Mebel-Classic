@@ -4,5 +4,16 @@
 
 ?>
 
+<?php include ('components/head.php') ?>
+<head>
+    <meta property=“og:title” content="МебельКлассик - Шкафы-купе">
+    <title> МебельКлассик - Шкафы-купе</title>    
+</head>
 
-<h1>Шкафы-купе</h1>
+<?php include ('components/header.php') ?>
+
+<div class="container">
+  <h1>Шкафы-купе</h1>
+</div>
+
+<?php include ('components/footer.php') ?>

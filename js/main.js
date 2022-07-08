@@ -192,8 +192,8 @@ function uploadFile(file){
         formImage.value = '';
         return;
     }
-    if (file.size > 2 * 1024 * 1024){
-        alert('Файл должен быть менее 2Мб');
+    if (file.size > 5 * 1024 * 1024){
+        alert('Файл должен быть менее 5Мб');
         return;
     }
 
