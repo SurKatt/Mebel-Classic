@@ -102,8 +102,8 @@ body{
 .title{
     .text(Nunito, 5.5rem, 800, @dark);
     text-align: center;
-    padding-bottom: 15px;
-    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-top: 50px;
 }
 .content-text{
     .text(Montserrat, 1.6rem, 400, @dark);
@@ -124,7 +124,8 @@ body{
     background-image: url(../img/header_bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;    
+    // position: relative;
     &__nav{
         height: 6vh;
         width: 100vw;
@@ -132,6 +133,9 @@ body{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        // top: 0;
+        // left: 0;
     }    
 }
 
@@ -232,7 +236,8 @@ body{
         width: 100%;
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: center;  
+        padding-top: 6vh;      
     }
     &__item{
         display: inline-block;
@@ -240,14 +245,14 @@ body{
         text-decoration: none;
         position: relative;
         padding-top: 5px;
-        padding-bottom: 5px;
+        padding-bottom: 5px;        
         &::before{
             content: "";
             width: 24px;
             height: 24px;
             position: absolute;
             top: 15%;
-            left: -15%;
+            left: -15%;            
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;            
@@ -271,14 +276,16 @@ body{
     &__contact{    
         display: flex;
         flex-direction: column;
+        z-index: 2;
         &-phone:hover,
-        &-email:hover{
+        &-email:hover, 
+        &-phone:hover .company__contact-phone::before {
             color: @yellow;
         }
         &-phone::before{
             background-image: url(../img/phone-call-header.svg);
         }
-        &-email::before{  
+        &-email::before{ 
             background-image: url(../img/email-header.svg);
         }
     }    
@@ -397,6 +404,8 @@ body{
 
 // ===== Section CATALOG (каталог) =====
 .catalog{
+    width: 100%;
+    padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -430,12 +439,78 @@ body{
     } 
     &__text{
         padding: 3px;
-        margin-top: -2px;
+        margin-top: -4px;
         background-color: @berge;
         .text(Montserrat, 20px, 400, @light);
     }  
 }
-// ===== Section STAGE (этапы) =====
+// ===== Section STAGE (Порядок работы) =====
+
+.order{
+    width: 100%; 
+    padding-bottom: 50px;
+    background-color: @dark;
+    background-image: url(../img/square_bg.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: auto;
+    &__scheme{
+        width: 90%;
+        margin: 10px auto 0;        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: 12%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-right: 90px;  
+        text-align: center; 
+        
+        position: relative;
+        &:last-child{
+            margin-right: 0px;
+        }
+        &:last-child::after{
+            background-image: none;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 35%;
+            right: -75%;
+            background-image: url(../img/arrow.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 80%;
+            height: 10%;
+        }
+        &__img{
+            fill: @light;
+            padding-bottom: 15px;
+        }
+        &__text{
+            .text(Montserrat, 16px, 700, @light);
+            line-height: 1.5;
+        }
+    }
+    &__text{
+        padding-top: 30px;
+        .text(Montserrat, 20px, 400, @light);
+        &__item{
+            padding-top: 30px;
+            &:first-child{
+                padding-top: 0px;
+            }
+        }
+
+    }
+}
 
 // ===== Section WORK (работы) =====
 
