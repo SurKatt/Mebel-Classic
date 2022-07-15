@@ -278,9 +278,11 @@ body{
         flex-direction: column;
         z-index: 2;
         &-phone:hover,
-        &-email:hover, 
-        &-phone:hover .company__contact-phone::before {
+        &-email:hover{
             color: @yellow;
+        }
+        &-phone:hover .company__contact-phone::before{
+            fill: @yellow;
         }
         &-phone::before{
             background-image: url(../img/phone-call-header.svg);
@@ -512,9 +514,64 @@ body{
     }
 }
 
-// ===== Section WORK (работы) =====
+// ===== Section NEWS (новости) =====
+
+.news{
+    width: 100%;
+    &__article{
+        padding: 25px;
+        margin: 20px 0;
+        border: 1px solid @orange;
+        border-radius: 20px; 
+    }
+    &__name{        
+        text-align: center;
+        .text(Montserrat, 20px, 700, @dark);
+        padding-bottom: 20px;
+    }
+    &__text{
+        .text(Montserrat, 16px, 400, @dark);
+        text-indent: 15px;
+        text-align: justify;       
+    }
+    &__indent{
+        text-indent: 0px;
+    }
+    &__btn{ 
+        cursor: pointer;        
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px;
+        border: @yellow;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background: @yellow;
+        border-radius: 15px;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        color: #333333;
+        &:hover{
+            background: @yellow_dark;
+        }
+        &:active{
+            background: @orange;
+        }
+    }
+}
+
+.more{
+    display: none;
+    transition: all 1s ease;
+}
+
+.news__hidden{
+    display: none;
+}
 
 // ===== Section FORM (форма) =====
+
 
 // ===== Section FEEDBACK (отзывы) =====
 

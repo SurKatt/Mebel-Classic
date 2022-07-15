@@ -1,7 +1,7 @@
-// ===== Работа верхним меню =====
+// ===== Работа с верхним меню =====
 window.addEventListener('scroll', ()=>{
     let scrollHeight = window.scrollY;
-    if(scrollHeight >= 0) {
+    if(scrollHeight > 0) {
         document.querySelector('.header__nav').style.zIndex = 5; 
         document.querySelector('.header__nav').style.position = 'fixed';      
     }
@@ -11,7 +11,77 @@ window.addEventListener('scroll', ()=>{
 });
 
 
+// ===== Работа кнопки "Подробнее" в новостях =====
 
+let moreElements = document.querySelectorAll(".more__btn");
+
+function moreBtn(event){
+    const target =  event.target;
+    const classes = target.previousElementSibling;
+    // console.log(target.parentElement.children);
+
+    hiddenElements = target.parentElement.children;
+    for (elem of hiddenElements) {
+        for (el of elem.classList){
+            if (el === 'news__hidden'){
+                // console.log(elem);
+                elem.classList.remove('news__hidden');
+                elem.classList.add('news__show');
+                elem.style.display = 'inline-block';
+                target.textContent = 'Скрыть';
+                target.parentElement.children[1].children[0].style.display = 'none';
+                target.parentElement.children[1].children[1].style.display = 'inline';
+            }
+            else if (el === 'news__show'){
+                elem.classList.add('news__hidden');
+                elem.classList.remove('news__show');
+                elem.style.display = 'none';
+                target.textContent = 'Показать';
+                target.parentElement.children[1].children[0].style.display = 'inline';
+                target.parentElement.children[1].children[1].style.display = 'none';
+            }
+        }
+    }
+    }
+    
+    // for (list of classes.classList){
+    //     if (list === 'hidden'){
+    //         // console.log(list);
+    //         classes.classList.toggle('hidden');
+    //         // target.previousElementSibling.style.display = 'inline-block';
+    //         // target.parentElement.children[1].lastElementChild.style.display = 'none';
+    //         // target.textContent = 'Скрыть';           
+    //     }
+    //     else{
+    //         classes.classList.toggle('hidden');
+    //         // target.previousElementSibling.style.display = 'none';
+    //         // target.parentElement.children[1].lastElementChild.style.display = 'inline';
+    //         // target.textContent = 'Показать';
+    //         // console.log(classes);
+            
+    //     }
+    // }
+// }
+    // console.log(target.previousElementSibling.classList);
+
+    // if (target.previousElementSibling.classList !== 'hidden'){
+    //     target.previousElementSibling.style.display = 'block';
+    //     target.parentElement.children[1].lastElementChild.style.display = 'none';
+    //     target.textContent = 'Скрыть';
+    // }
+    // else{
+    //     target.previousElementSibling.style.display = 'none';
+    //     target.parentElement.children[1].lastElementChild.style.display = 'inline';
+    //     target.textContent = 'Показать';
+    // } 
+
+    
+
+// }
+
+for (more of moreElements){
+    more.addEventListener('click', moreBtn);
+}
 
 
 

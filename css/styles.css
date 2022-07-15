@@ -308,9 +308,11 @@ body {
   z-index: 2;
 }
 .company__contact-phone:hover,
-.company__contact-email:hover,
-.company__contact-phone:hover .company__contact-phone::before {
+.company__contact-email:hover {
   color: #fae264;
+}
+.company__contact-phone:hover .company__contact-phone::before {
+  fill: #fae264;
 }
 .company__contact-phone::before {
   background-image: url(../img/phone-call-header.svg);
@@ -567,6 +569,66 @@ body {
 }
 .order__text__item:first-child {
   padding-top: 0px;
+}
+.news {
+  width: 100%;
+}
+.news__article {
+  padding: 25px;
+  margin: 20px 0;
+  border: 1px solid #ff4500;
+  border-radius: 20px;
+}
+.news__name {
+  text-align: center;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+  padding-bottom: 20px;
+}
+.news__text {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+  text-indent: 15px;
+  text-align: justify;
+}
+.news__indent {
+  text-indent: 0px;
+}
+.news__btn {
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px;
+  border: #fae264;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fae264;
+  border-radius: 15px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+}
+.news__btn:hover {
+  background: #d1c068;
+}
+.news__btn:active {
+  background: #ff4500;
+}
+.more {
+  display: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.news__hidden {
+  display: none;
 }
 .footer {
   margin: 10% 0 0 0;
