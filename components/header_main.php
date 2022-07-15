@@ -6,6 +6,7 @@
     <a href="#catalog" class="nav__link">Наши работы</a>                
     <a href="#order" class="nav__link">Порядок работы</a>
     <a href="#news" class="nav__link">Новости</a>
+    <a href="#production" class="nav__link">Производство</a>    
     <a href="#feedback" class="nav__link">Отзывы</a>
 </nav>  
     <div class="company__info">            

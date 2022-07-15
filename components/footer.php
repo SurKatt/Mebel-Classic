@@ -2,18 +2,18 @@
   <div class="footer__info">
     <div class="footer__menu">   
       <div class="textcols">
-        <a href="news.php" class="footer__menu__item">Новости</a>      
+        <a href="#news" class="footer__menu__item">Новости</a>      
         <!-- <a href="/catalog" class="footer__menu__item">Каталог</a> -->
-        <a href="feedback.php" class="footer__menu__item">Отзывы</a>
-        <a href="order.php" class="footer__menu__item">Порядок работы</a>
+        <a href="#feedback" class="footer__menu__item">Отзывы</a>
+        <a href="#order" class="footer__menu__item">Порядок работы</a>
         <!-- <a href="/service" class="footer__menu__item">Услуги</a> -->
         <!-- <a href="/fasad" class="footer__menu__item">Фасады</a> -->
-        <a href="contact.php" class="footer__menu__item">Контакты</a>  
+        <!-- <a href="contact.php" class="footer__menu__item">Контакты</a>   -->
       </div>   
       <div class="textcols">
-        <a href="kitchen.php" class="footer__menu__item">Кухни</a> 
-        <a href="wardrobe.php" class="footer__menu__item">Шкафы и шкафы-купе</a> 
-        <a href="commode.php" class="footer__menu__item">Комоды</a> 
+        <a href="#production" class="footer__menu__item">Производство</a> 
+        <a href="#catalog" class="footer__menu__item">Наши работы</a> 
+        <!-- <a href="commode.php" class="footer__menu__item">Комоды</a>  -->
         <!-- <a href="/wardrobe-coupe" class="footer__menu__item">Шкафы-купе</a> -->
       </div>       
     </div>

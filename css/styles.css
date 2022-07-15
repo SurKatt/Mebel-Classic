@@ -77,13 +77,13 @@ body {
 }
 .title {
   font-family: Nunito, Arial, Helvetica, sans-serif;
-  font-size: 5.5rem;
+  font-size: 55px;
   font-weight: 800;
   font-style: normal;
   color: #333333;
   text-align: center;
   padding-bottom: 30px;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 .content-text {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
@@ -109,7 +109,7 @@ body {
   background-size: cover;
 }
 .header__nav {
-  height: 6vh;
+  height: 7vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,7 +145,7 @@ body {
 }
 .nav__link {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 16px;
   font-weight: 700;
   font-style: normal;
   color: #333333;
@@ -572,6 +572,7 @@ body {
 }
 .news {
   width: 100%;
+  padding-bottom: 5%;
 }
 .news__article {
   padding: 25px;
@@ -629,6 +630,68 @@ body {
 }
 .news__hidden {
   display: none;
+}
+.production {
+  width: 100%;
+  padding: 30px;
+  background-image: url(../img/production_10.jpeg);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+}
+.production__gallery {
+  padding: 0 30px 30px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.production__img {
+  margin: 10px;
+  border: 10px solid #ffffff;
+}
+.production__about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #333333;
+  margin: 0 0 30px 0;
+  padding: 15px;
+  opacity: 0.75;
+}
+.production__about__digit {
+  width: 20%;
+  text-align: center;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  font-style: normal;
+  color: #f9f1e7;
+}
+.production__about__text {
+  padding-top: 20px;
+  display: block;
+  text-align: center;
+  font-family: Roboro, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  color: #f9f1e7;
 }
 .footer {
   margin: 10% 0 0 0;

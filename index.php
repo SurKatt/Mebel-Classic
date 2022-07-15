@@ -227,9 +227,29 @@
     </section>
     <!-- Новости -->
 
+    <section class="production" id="production">
+        <h2 class="production__title title dark">Наше производство</h2>    
+        <div class="production__gallery">
+            <img src="img/production_02.jpeg" class="production__img" alt="production__img" width="300" height="200">
+            <img src="img/production_03.jpeg" class="production__img" alt="production__img" width="300" height="200">
+            <img src="img/production_04.jpeg" class="production__img" alt="production__img" width="300" height="200">
+            <img src="img/production_05.jpeg" class="production__img" alt="production__img" width="300" height="200">
+            <img src="img/production_06.jpeg" class="production__img" alt="production__img" width="300" height="200">
+            <img src="img/production_08.jpg" class="production__img" alt="production__img" width="300" height="200">
+            <img src="img/production_09.jpg" class="production__img" alt="production__img" width="300" height="200">
+        </div>
+        <div class="production__about">
+            <p class="production__about__digit"> 50 <span class="production__about__text"> м<sup>2</sup> площадь наших производственных помещений</span> </p>
+            <p class="production__about__digit"> 5 <span class="production__about__text">  человек изготавливают лучшую мебель для вас</span> </p>
+            <p class="production__about__digit"> 350 <span class="production__about__text"> ассортимент различных цветов для фасадов</span> </p>
+            <p class="production__about__digit"> 5 <span class="production__about__text"> станков европейского качества используется в производстве мебели</span> </p>
+        </div>
+    </section>
     <!-- Наше производство -->
+
     <section class="feedback container" id="feedback">
         <h2 class="feedback__title title dark">Отзывы покупателей</h2>      
+
     </section>
     <!-- Отзывы -->
 

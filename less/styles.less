@@ -100,10 +100,10 @@ body{
 }
 
 .title{
-    .text(Nunito, 5.5rem, 800, @dark);
+    .text(Nunito, 55px, 800, @dark);
     text-align: center;
     padding-bottom: 30px;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 .content-text{
     .text(Montserrat, 1.6rem, 400, @dark);
@@ -127,7 +127,7 @@ body{
     background-size: cover;    
     // position: relative;
     &__nav{
-        height: 6vh;
+        height: 7vh;
         width: 100vw;
         display: flex;
         flex-wrap: wrap;
@@ -155,7 +155,7 @@ body{
 .nav{    
     background-color: @yellow;
     &__link{
-        .text(Montserrat, 2rem, 700, @dark);
+        .text(Montserrat, 16px, 700, @dark);
         text-decoration: none;
         padding-left: 30px;
         padding-right: 30px;
@@ -518,6 +518,7 @@ body{
 
 .news{
     width: 100%;
+    padding-bottom: 5%;
     &__article{
         padding: 25px;
         margin: 20px 0;
@@ -568,6 +569,49 @@ body{
 
 .news__hidden{
     display: none;
+}
+
+// ===== Section PRODUCTION (производство) =====
+
+.production{
+    width: 100%;
+    padding: 30px;
+    background-image: url(../img/production_10.jpeg);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+    &__gallery{
+        padding: 0 30px 30px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__img{
+        margin: 10px;
+        border: 10px solid @white;
+    }
+    &__about{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+        background-color: @dark;        
+        margin: 0 0 30px 0;
+        padding: 15px;
+        opacity: 0.75;
+        &__digit{ 
+            width: 20%;           
+            text-align: center;
+            .text(Montserrat, 70px, 400, @light);
+        }
+        &__text{  
+            padding-top: 20px;   
+            display: block; 
+            text-align: center;      
+            .text(Roboro, 20px, 400, @light);
+        }
+    }
 }
 
 // ===== Section FORM (форма) =====
