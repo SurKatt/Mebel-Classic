@@ -42,50 +42,91 @@ function moreBtn(event){
             }
         }
     }
-    }
-    
-    // for (list of classes.classList){
-    //     if (list === 'hidden'){
-    //         // console.log(list);
-    //         classes.classList.toggle('hidden');
-    //         // target.previousElementSibling.style.display = 'inline-block';
-    //         // target.parentElement.children[1].lastElementChild.style.display = 'none';
-    //         // target.textContent = 'Скрыть';           
-    //     }
-    //     else{
-    //         classes.classList.toggle('hidden');
-    //         // target.previousElementSibling.style.display = 'none';
-    //         // target.parentElement.children[1].lastElementChild.style.display = 'inline';
-    //         // target.textContent = 'Показать';
-    //         // console.log(classes);
-            
-    //     }
-    // }
-// }
-    // console.log(target.previousElementSibling.classList);
-
-    // if (target.previousElementSibling.classList !== 'hidden'){
-    //     target.previousElementSibling.style.display = 'block';
-    //     target.parentElement.children[1].lastElementChild.style.display = 'none';
-    //     target.textContent = 'Скрыть';
-    // }
-    // else{
-    //     target.previousElementSibling.style.display = 'none';
-    //     target.parentElement.children[1].lastElementChild.style.display = 'inline';
-    //     target.textContent = 'Показать';
-    // } 
-
-    
-
-// }
+}
 
 for (more of moreElements){
     more.addEventListener('click', moreBtn);
 }
 
+// ===== Работа слайдер "Отзывы"=====
+
+let offset = 0; // смещение от левого края
+const sliderLine = document.querySelector('.slider__line');
+const btnPrev = document.querySelector('.slide_prev');
+const btnNext = document.querySelector('.slide_next');
+
+btnNext.addEventListener('click', () => {
+    offset += 1200;
+    if (offset > 1200*5){            // 1200 * (число слайдов - 1)
+        offset = 0;
+    }
+    sliderLine.style.left = -offset + 'px';
+})
+
+btnPrev.addEventListener('click', () => {
+    offset -= 1200;    // ширина блока с комментарием, смотри css
+    if (offset < 0){            
+        offset = 1200*5;           // 1200 * (число слайдов - 1)
+    }
+    sliderLine.style.left = -offset + 'px';
+})
+
+// Каталог работ, работа с ссылами на адресами
+
+let catalogLinks = document.querySelectorAll('.catalog__link');
+let previewImages = document.querySelectorAll('.catalog__preview');
+
+function activeImage(preview){
+    document.body.onclick = (e) => {
+        e = e || windows.event;
+        if(e.target.classList.contains('catalog__mini__img')){
+            let allImagesByAddress = preview.querySelectorAll('.catalog__mini__img');
+            for (image of allImagesByAddress) {
+                image.classList.remove('catalog__active');
+            }
+            preview.querySelector('.catalog__max__img').src = e.target.src;
+            e.target.classList.add('catalog__active');
+        }
+    }
+}
+
+function catalogCloseBtn(preview){
+    let btn = preview.querySelector('.catalog__mini__btn');    
+    btn.addEventListener('click', () => {
+        let images = preview.querySelectorAll('.catalog__mini__img')
+        for (img of images){
+            img.classList.remove('catalog__active');
+        }
+        images[0].classList.add('catalog__active');
+        btn.closest('.catalog__preview').classList.add('catalog__hidden');
+    })   
+}
+
+for (link of catalogLinks) {
+    link.addEventListener('click', (e) => {        
+        e.preventDefault();
+        let currentLink = e.target.parentElement;
+        let address = currentLink.dataset.address;        
+        for (preview of previewImages) {
+            let image = preview.dataset.link;   
+            if (address == image){  
+                catalogCloseBtn(preview);
+                activeImage(preview);                                        
+                preview.classList.remove('catalog__hidden');                              
+            }            
+            else {    
+                preview.classList.add('catalog__hidden');                
+            }                   
+        }   
+    })    
+}
 
 
-// // ===== Работа с модальным окном (открытие/закрытие) =====
+
+
+
+
+// ===== Работа с модальным окном (открытие/закрытие) =====
 
 const modalLinks = document.querySelectorAll('.modal-link');
 const body = document.querySelector('body');

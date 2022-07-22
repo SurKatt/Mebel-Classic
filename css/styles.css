@@ -482,6 +482,65 @@ body {
   font-style: normal;
   color: #f9f1e7;
 }
+.catalog__preview {
+  margin: 30px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+.catalog__max {
+  width: 50%;
+  text-align: center;
+}
+.catalog__mini {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.catalog__mini__btn {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  border: 1px solid #333333;
+}
+.catalog__mini__btn:hover {
+  background-color: #fae264;
+}
+.catalog__mini__btn:active {
+  background-color: #d1c068;
+}
+.catalog__mini__img {
+  padding: 20px;
+}
+.catalog__hidden {
+  display: none;
+}
+.catalog__active {
+  border: 2px solid #ff4500;
+  border-radius: 20px;
+}
 .order {
   width: 100%;
   padding-bottom: 50px;
@@ -633,7 +692,7 @@ body {
 }
 .production {
   width: 100%;
-  padding: 30px;
+  padding: 0 30px 30px 30px;
   background-image: url(../img/production_10.jpeg);
   background-repeat: repeat-y;
   background-position: center;
@@ -692,6 +751,136 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #f9f1e7;
+}
+.slider {
+  width: 1200px;
+  min-height: 350px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider__line {
+  width: calc(7200px);
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.slider__item {
+  width: 1200px;
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5% 2%;
+}
+.slider__item__text {
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  font-family: Roboro, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider__item__author {
+  font-family: Roboro, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+.slider__item__data {
+  font-family: Roboro, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+.slider__item__btn {
+  width: 100%;
+}
+.slider__item__author,
+.slider__item__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 50%;
+  height: 20%;
+}
+.slide_prev,
+.slide_next {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  position: absolute;
+  top: 43%;
+  font-family: Roboro, Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+  background-color: #cccccc;
+  z-index: 3;
+}
+.slide_prev:hover,
+.slide_next:hover {
+  background-color: rgba(204, 204, 204, 0.7);
+}
+.slide_prev:active,
+.slide_next:active {
+  background-color: rgba(204, 204, 204, 0.5);
+}
+.slide_prev {
+  left: 2%;
+}
+.slide_next {
+  left: 93%;
+}
+.yellow {
+  background-color: yellow;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
 }
 .footer {
   margin: 10% 0 0 0;

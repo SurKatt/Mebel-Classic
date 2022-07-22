@@ -10,32 +10,15 @@
     <main class="main">      
     <section class="about container" id="about">
         <h2 class="about__title title dark">О компании</h2>
-        <p class="about__text content-text dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Voluptates, unde earum? Repudiandae, cumque ad! Minima, sunt voluptatibus, maiores animi, 
-            aspernatur optio est libero commodi sequi magnam obcaecati qui quasi doloremque dolorem 
-            inventore at ducimus corporis veniam? Tempora repudiandae sequi doloremque ducimus debitis 
-            modi accusantium perferendis optio fuga, magni ea accusamus, amet libero alias error 
-            asperiores magnam. Velit itaque eaque quaerat quisquam nisi quae nihil, magnam recusandae 
-            nobis necessitatibus quod quibusdam ratione, dolorem ea dicta? Officiis temporibus suscipit 
-            numquam eius dolorem a nisi laborum officia. Magnam sapiente quae fugit recusandae a. 
-            Voluptatum ab non molestias fugit, a saepe voluptate ipsam sed nesciunt enim officiis 
-            vel quibusdam ipsa dolorem quo itaque ipsum perferendis? Ipsum debitis, numquam atque 
-            quae facilis velit. Eveniet recusandae excepturi facilis exercitationem unde ducimus dolor, 
-            nisi quo sit dolorum perspiciatis minus! Et placeat aliquam error magnam a corporis illum 
-            corrupti dicta, illo incidunt atque hic nostrum cupiditate excepturi voluptate dolor fugiat 
-            at expedita doloremque dolorem provident? Rerum consequatur maiores possimus tenetur 
-            necessitatibus quasi omnis velit odit. Omnis mollitia minus quasi corrupti soluta. 
-            Reiciendis debitis sunt vel quasi sequi itaque fugiat non dolorum vero aut aliquam 
-            animi odio exercitationem voluptate dignissimos molestias doloremque maxime modi aliquid natus, 
-            ex consequatur? Itaque vel neque, quisquam maxime hic iure ratione harum, magni optio, magnam 
-            cum tempora vero tempore. Culpa, quam blanditiis amet asperiores eveniet neque ducimus voluptatum 
-            inima excepturi rerum cupiditate aliquam. Id aliquam sapiente sint vitae quos, maxime unde ab 
-            perferendis quibusdam ad? Molestiae, magni reiciendis? Voluptas veniam reprehenderit dolorem 
-            cumque saepe necessitatibus asperiores aliquid! Quis itaque eveniet quos tenetur sint iste 
-            reprehenderit libero maxime quia adipisci, porro ducimus repellat odit sequi. Aspernatur suscipit 
-            eaque possimus voluptatem. Maxime dolores sed fugit cum amet neque sequi similique possimus adipisci. 
-            Distinctio minus maiores doloremque veniam nesciunt! Corporis adipisci quibusdam, ex ullam eaque 
-            veniam labore? </p>                
+        <p class="about__text content-text dark">Уже более 25&nbsp;лет наша команда занимается изготовлением мебели 
+            по&nbsp;индивидуальным размерам, которая, в&nbsp;отличие от&nbsp;типовой мебели, даёт возможность организовать 
+            помещение под свои размеры и&nbsp;свой вкус. Это особенно актуально для комнат с&nbsp;нестандартными планировками,
+            например, с&nbsp;большими нишами, проемами, нестандартными или выступающими углами и&nbsp;т.д.
+        </p> 
+        <p class="about__text content-text dark">Такая мебель будет иметь функциональное наполнение под ваши запросы, а&nbsp;также превосходно выглядеть ввиду широкого выбора </span>
+            цвета, материалов, фрезеровок фасада, их&nbsp;ручек и&nbsp;варианта их&nbsp;установки. </p>
+        <p class="about__text content-text dark">Большое внимание уделяется и&nbsp;технической составляющей изготавливаемой мебели: качественная фурнитура, которую мы&nbsp;используем, 
+            обеспечит правильный функционал любого гарнитура и&nbsp;будет радовать вас при каждодневном использовании.               
     </section> 
     <!-- О нас -->
 
@@ -100,18 +83,52 @@
 
     <section class="catalog container" id="catalog">
         <h2 class="catalog__title title dark">Наши работы</h2>
-        <a href="#" class="catalog__link">
-            <img src="img/cat_kitchen.jpg" alt="cat_kitchen" class="catalog__img">
+        <a href="#" class="catalog__link" data-address="1">
+            <img src="img/cat_kitchen.jpg" alt="cat_work" class="catalog__img">
             <p class="catalog__text">Адрес 1</p>
-        </a>        
-        <a href="#" class="catalog__link">
-            <img src="img/cat_commode.jpg" alt="cat_commode" class="catalog__img">
+        </a>               
+        <a href="#" class="catalog__link" data-address="2">
+            <img src="img/cat_commode.jpg" alt="cat_work" class="catalog__img">
             <p class="catalog__text">Адрес 2</p>
         </a>
-        <a href="#" class="catalog__link">
-            <img src="img/cat_wardrobe.jpg" alt="cat_wardrobe" class="catalog__img">
+        <a href="#" class="catalog__link" data-address="3">
+            <img src="img/cat_wardrobe.jpg" alt="cat_work" class="catalog__img">
             <p class="catalog__text">Адрес 3</p>
         </a> 
+        <div class="catalog__preview catalog__hidden" data-link="1">
+            <div class="catalog__max">
+                <img class="catalog__max__img" src="img/work_01/work_1_01.jpg" alt="catalog_max_img" width="400">
+            </div>
+            <div class="catalog__mini">
+                <button class="catalog__mini__btn" title="Закрыть просмотр">Х</button>
+                <img class="catalog__mini__img catalog__active" src="img/work_01/work_1_01.jpg" alt="catalog_min_img" width="150">
+                <img class="catalog__mini__img" src="img/work_01/work_1_02.jpg" alt="catalog_min_img" width="150">
+                <img class="catalog__mini__img" src="img/work_01/work_1_03.jpg" alt="catalog_min_img" width="150">
+                <img class="catalog__mini__img" src="img/work_01/work_1_04.jpg" alt="catalog_min_img" width="150">
+            </div>
+        </div> 
+        <div class="catalog__preview catalog__hidden" data-link="2">
+            <div class="catalog__max">
+                <img class="catalog__max__img" src="img/work_02/work_2_01.jpg" alt="catalog_max_img" width="400">
+            </div>
+            <div class="catalog__mini">
+                <button class="catalog__mini__btn" title="Закрыть просмотр">Х</button>
+                <img class="catalog__mini__img catalog__active" src="img/work_02/work_2_01.jpg" alt="catalog_min_img" width="150">
+                <img class="catalog__mini__img" src="img/work_02/work_2_02.jpg" alt="catalog_min_img" width="150">
+                <img  class="catalog__mini__img" src="img/work_02/work_2_03.jpg" alt="catalog_min_img" width="150">
+            </div>
+        </div>
+        <div class="catalog__preview catalog__hidden" data-link="3">
+            <div class="catalog__max">
+                <img class="catalog__max__img" src="img/work_03/work_3_01.jpg" alt="catalog_max_img" width="400">
+            </div>
+            <div class="catalog__mini">
+                <button class="catalog__mini__btn" title="Закрыть просмотр">Х</button>
+                <img class="catalog__mini__img catalog__active" src="img/work_03/work_3_01.jpg" alt="catalog_min_img" width="150">
+                <img class="catalog__mini__img" src="img/work_03/work_3_02.jpg" alt="catalog_min_img" width="150">
+                <img class="catalog__mini__img" src="img/work_03/work_3_03.jpg" alt="catalog_min_img" width="150">               
+            </div>
+        </div>        
     </section>
     <!-- Наши работы -->
 
@@ -247,9 +264,44 @@
     </section>
     <!-- Наше производство -->
 
-    <section class="feedback container" id="feedback">
-        <h2 class="feedback__title title dark">Отзывы покупателей</h2>      
-
+    <section class="feedback" id="feedback">
+        <h2 class="feedback__title title container dark">Отзывы покупателей</h2>      
+        <div class="feedback__slide slider">
+            <button class="slide_prev">&#8249;</button>
+            <div class="slider__line">
+                <div class="slider__item ">
+                    <p class="slider__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos incidunt, qui eligendi blanditiis atque, asperiores harum, ducimus numquam vel sit ex facilis quidem sunt expedita quod reprehenderit voluptatum deleniti similique soluta sequi! Itaque commodi ab dolorum sed est animi, enim magnam esse vero quaerat modi corporis ipsum consectetur exercitationem, voluptatum architecto eaque nisi, repellendus iste! Voluptatem ea dignissimos laborum architecto id possimus, vel ullam expedita numquam deserunt, sed aliquid nesciunt excepturi quam perferendis maiores, nisi at soluta ipsam sint. Quod, placeat! Nobis quod, eius veniam illum alias quam doloribus inventore, recusandae voluptas qui officia obcaecati. Unde suscipit quos quasi libero!</p>
+                    <p class="slider__item__author">Маша</p>
+                    <p class="slider__item__data">12.12.2021</p>
+                </div>
+                <div class="slider__item ">
+                    <p class="slider__item__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis mollitia praesentium suscipit quidem perspiciatis perferendis molestiae eum, aliquam iste, amet nihil doloremque ad ex expedita, reprehenderit officia vitae! Rem, distinctio?</p>
+                    <p class="slider__item__author">Даша</p>
+                    <p class="slider__item__data">12.12.2021</p>
+                </div>
+                <div class="slider__item ">
+                    <p class="slider__item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem rerum voluptatem amet eaque beatae eum iusto voluptate quibusdam accusamus, illo est at doloribus nemo harum recusandae deleniti minus nostrum magni atque qui sit ipsam? Voluptatem quia, necessitatibus iusto autem tempore vero illum similique minima dolorum perspiciatis debitis ipsum veniam. Distinctio!</p>
+                    <p class="slider__item__author">Саша</p>
+                    <p class="slider__item__data">12.12.2021</p>
+                </div>
+                <div class="slider__item ">
+                    <p class="slider__item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ut deserunt repellat nemo rerum praesentium excepturi accusantium ipsa? Eum magni modi necessitatibus cupiditate, ut tenetur nemo voluptatum eius ducimus ratione vitae doloremque nisi perferendis quae esse. Modi magni neque ipsam id consequuntur! Quia, eveniet consectetur?</p>
+                    <p class="slider__item__author">Миша</p>
+                    <p class="slider__item__data">12.12.2021</p>
+                </div>
+                <div class="slider__item ">
+                    <p class="slider__item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat vero eaque nesciunt nemo! Itaque excepturi minus quod reiciendis exercitationem, tempora nisi assumenda laborum fugiat dignissimos nemo enim! Dolorem velit, maiores saepe sequi quo fugit totam corporis ducimus similique sunt maxime illo perferendis deleniti eum veniam numquam culpa, et quisquam. Amet ea tempora dignissimos cupiditate.</p>
+                    <p class="slider__item__author">Гриша</p>
+                    <p class="slider__item__data">12.12.2021</p>
+                </div>
+                <div class="slider__item ">
+                    <p class="slider__item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem cum et, inventore ipsam dignissimos error numquam consectetur eveniet debitis fugiat a expedita, explicabo amet odio? Eaque cumque excepturi, ex at perferendis aperiam?</p>
+                    <p class="slider__item__author">Лёша</p>
+                    <p class="slider__item__data">12.12.2021</p>
+                </div>
+            </div>
+            <button class="slide_next">&#8250;</button>
+        </div>
     </section>
     <!-- Отзывы -->
 

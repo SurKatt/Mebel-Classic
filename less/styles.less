@@ -43,6 +43,9 @@
 @orange: orangered;
 @berge: #96928D;
 
+@commentWidth: 1200px;
+@commentHeight: 350px;
+
 // ===== Mixins =====
 
 .text(@family, @size, @weight, @color) {
@@ -444,7 +447,54 @@ body{
         margin-top: -4px;
         background-color: @berge;
         .text(Montserrat, 20px, 400, @light);
+    }    
+    &__preview{
+        margin: 30px 0;
+        width: 100%;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    &__max{
+        width: 50%;
+        text-align: center;
     }  
+    &__mini{
+        width: 50%;
+        display: flex;
+        align-items: center;   
+        justify-content: space-between;    
+        flex-wrap: wrap; 
+        // position: relative;
+        &__btn{
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 0%;
+            right: 0%; 
+            border: 1px solid @dark;           
+            &:hover{
+                background-color: @yellow;
+            }
+            &:active{
+                background-color: @yellow_dark;
+            }
+        }
+        &__img{
+            padding: 20px;
+        }   
+    }
+    &__hidden{
+        display: none;
+    }
+    &__active{
+        border: 2px solid @orange ;
+        border-radius: 20px;       
+    }
 }
 // ===== Section STAGE (Порядок работы) =====
 
@@ -523,7 +573,7 @@ body{
         padding: 25px;
         margin: 20px 0;
         border: 1px solid @orange;
-        border-radius: 20px; 
+        border-radius: 20px;         
     }
     &__name{        
         text-align: center;
@@ -575,7 +625,7 @@ body{
 
 .production{
     width: 100%;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
     background-image: url(../img/production_10.jpeg);
     background-repeat: repeat-y;
     background-position: center;
@@ -618,6 +668,100 @@ body{
 
 
 // ===== Section FEEDBACK (отзывы) =====
+
+
+.slider{    
+    width: @commentWidth;    
+    min-height:  @commentHeight;   
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    &__line{
+        width: calc(@commentWidth * 6);
+        height: @commentHeight; 
+        display: flex;
+        position: relative;
+        z-index: 1;
+        transition: all 1s ease;
+    } 
+    &__item{
+        width:  @commentWidth;
+        min-height:  @commentHeight; 
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5% 2%;
+        &__text{
+            width: 100%;
+            height: 80%;
+            text-align: center;
+            .text(Roboro, 20px, 400, @dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__author{
+            .text(Roboro, 20px, 700, @dark);
+            justify-content: left;
+        }
+        &__data{                       
+            .text(Roboro, 16px, 400, @dark);
+            justify-content: right;
+        }
+        &__btn{
+            width: 100%;
+        }
+    }  
+      
+}
+.slider__item__author,
+.slider__item__data{
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    height: 20%; 
+}
+
+.slide_prev,
+.slide_next{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 1px solid @dark;
+    border-radius: 20px;
+    position: absolute;
+    top: 43%;
+    .text(Roboro, 30px, 400, @dark);
+    background-color:rgba(204, 204, 204, 1);
+    z-index: 3;
+    &:hover{
+        background-color:rgba(204, 204, 204, 0.7);
+    }
+    &:active{
+        background-color:rgba(204, 204, 204, 0.5);
+    }
+}
+.slide_prev{
+    left: 2%;    
+}
+.slide_next{
+    left: 93%; 
+}
+
+.yellow{
+    background-color: yellow;
+    // height: 300px;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
 
 
 // ===== FOOTER =====
